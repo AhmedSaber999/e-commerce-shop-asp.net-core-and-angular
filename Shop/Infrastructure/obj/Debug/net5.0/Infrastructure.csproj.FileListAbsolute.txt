@@ -29,7 +29,6 @@ E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infr
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
-E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 E:\My Projects\Ecommerce-shop\e-commerce-shop-asp.net-core-and-angular\shop\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
