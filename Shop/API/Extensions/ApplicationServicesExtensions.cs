@@ -37,6 +37,9 @@ namespace API.Extensions
                     sw.SwaggerDoc("v1", new OpenApiInfo {Title = "API", Version = "v1"});
                 }
             );
+
+            services.AddScoped<IBasketRepository, BasketRepository>();
+
             return services;
         }
     }
