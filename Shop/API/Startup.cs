@@ -6,6 +6,7 @@ using API.Middlewares;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Data.Repositories;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -20,10 +21,10 @@ namespace API
 {
     public class Startup
     {
-        private readonly IConfiguration Configuration;
+        private readonly IConfiguration configuration;
         public Startup(IConfiguration configuration)
         {
-            this.Configuration = configuration;
+            this.configuration = configuration;
         }
 
 
@@ -33,15 +34,20 @@ namespace API
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
             {
-                x.UseSqlite(Configuration.GetConnectionString("DefualtConnection"));
+                x.UseSqlite(configuration.GetConnectionString("DefualtConnection"));
+            });
+
+            services.AddDbContext<AppIdentityDbContext>(x => {
+                x.UseSqlite(this.configuration.GetConnectionString("IdentityConnection"));
             });
 
             services.AddSingleton<IConnectionMultiplexer>(c => {
-                var config = ConfigurationOptions.Parse(this.Configuration.GetConnectionString("Redis"), true);
+                var config = ConfigurationOptions.Parse(this.configuration.GetConnectionString("Redis"), true);
                 return ConnectionMultiplexer.Connect(config);
             });
 
             services.AddApplicationServices();
+            services.AddIdentityServices(this.configuration);
 
             services.AddCors(options => {
                 options.AddPolicy("CorsPolicy", policy=>{
@@ -69,6 +75,7 @@ namespace API
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

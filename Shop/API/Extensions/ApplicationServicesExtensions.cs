@@ -4,6 +4,7 @@ using API.Helpers;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Data.Repositories;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -14,6 +15,7 @@ namespace API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<StoreContext>();
             // services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped((typeof(IGenericRepository<>)), (typeof(GenericRepository<>)));

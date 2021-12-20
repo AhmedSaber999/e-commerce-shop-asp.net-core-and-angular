@@ -38,7 +38,7 @@ namespace API.Middlewares
                     new ApiException(context.Response.StatusCode, ex.Message, ex.StackTrace.ToString()):
                     new ApiException((int)context.Response.StatusCode);
 
-                //var options = new JsonSerializerOptions(PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
+                // var options = new JsonSerializerOptions(PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
                 var json = JsonSerializer.Serialize(response);
                 await context.Response.WriteAsync(json);
             }
