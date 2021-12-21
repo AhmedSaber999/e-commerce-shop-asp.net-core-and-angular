@@ -10,6 +10,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using API.Extensions;
 using AutoMapper;
+using System.Collections.Generic;
 
 namespace API.Controllers
 {
@@ -52,6 +53,13 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> RegisterAsync(RegisterDto registerDto)
         {
+            if(CheckEmailExistAsync(registerDto.Email).Result.Value)
+            {
+                var apiValidationErrorResponse = new ApiValidationErrorResponse();
+                apiValidationErrorResponse.Errors = new []{"Email address is in use"};
+                
+                return new BadRequestObjectResult(apiValidationErrorResponse);
+            }
             // foreach(var u in userManager.Users){
             //     await userManager.DeleteAsync(u);
             // }
