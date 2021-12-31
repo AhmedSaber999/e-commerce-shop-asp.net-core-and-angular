@@ -38,7 +38,7 @@ namespace API.Controllers
             var user = await userManager.FindByEmailAsync(loginDto.Email);
             if(user == null) return Unauthorized(new ApiResponse(401));
 
-            var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Passowrd, false);
+            var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
             if(!result.Succeeded) return Unauthorized(new ApiResponse(401));
 
@@ -76,7 +76,7 @@ namespace API.Controllers
                     State = "A3"
                 }
             };
-            var result = await userManager.CreateAsync(user, registerDto.Passowrd);
+            var result = await userManager.CreateAsync(user, registerDto.Password);
 
             if(!result.Succeeded) return BadRequest(new ApiResponse(400));
 
