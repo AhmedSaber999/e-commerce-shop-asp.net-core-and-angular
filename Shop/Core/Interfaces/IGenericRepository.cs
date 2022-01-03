@@ -11,5 +11,9 @@ namespace Core.Interfaces
         T GetEntityWithSpecification(ISpecification<T> specification);
         IReadOnlyList<T> GetListWithSpecification(ISpecification<T> specification);
         int Count(ISpecification<T> specification);
+
+        void Insert(T entity);
+        void Update(T entity);
+        void Delete(T entity);
     }
 }

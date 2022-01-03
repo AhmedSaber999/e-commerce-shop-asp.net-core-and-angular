@@ -18,11 +18,12 @@ namespace Infrastructure.Identity.SeedData
                         UserName = "Ahmed",
                         Address = new Address
                         {
-                            Country = "Egypt",
+                            FirstName = "Ahmed",
+                            LastName = "Saber",
                             City = "Cairo",
                             Street = "10 The Street",
-                            ZipCode = "9031",
-
+                            Zipcode = "9031",
+                            State = "test"
                         }
                     };
                     var response = await userManager.CreateAsync(user, "123456@Ahmed");

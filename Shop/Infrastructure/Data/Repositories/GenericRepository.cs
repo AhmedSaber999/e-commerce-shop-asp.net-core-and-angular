@@ -43,5 +43,21 @@ namespace Infrastructure.Data.Repositories
         {
             return SpecificationEvaluator<T>.GetQuery(context.Set<T>().AsQueryable(), specification);
         }
+
+        public void Insert(T entity)
+        {
+            context.Set<T>().Add(entity);
+        }
+
+        public void Update(T entity)
+        {
+            context.Set<T>().Update(entity);
+            context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+        }
+
+        public void Delete(T entity)
+        {
+            context.Set<T>().Remove(entity);
+        }
     }
 }

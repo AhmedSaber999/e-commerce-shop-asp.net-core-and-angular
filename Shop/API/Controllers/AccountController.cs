@@ -69,10 +69,11 @@ namespace API.Controllers
                 UserName = registerDto.Email,
                 DisplayName = registerDto.DisplayName,
                 Address = new Address{
-                    Country = "Egypt",
+                    FirstName = "Ahmed",
+                    LastName = "Saber",
                     City = "Cairo",
                     Street = "Al Sayed Al Bably",
-                    ZipCode = "1243",
+                    Zipcode = "1243",
                     State = "A3"
                 }
             };
@@ -118,7 +119,7 @@ namespace API.Controllers
             return mapper.Map<Address, AddressDto>(user.Address);
         }
 
-        [HttpPost("address")]
+        [HttpPut("address")]
         [Authorize]
         public async Task<ActionResult<AddressDto>> UpdateUserAddressAsync(AddressDto address)
         {

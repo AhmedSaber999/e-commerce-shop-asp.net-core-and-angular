@@ -31,7 +31,7 @@ namespace API.Controllers
 
             var address = mapper.Map<OrderAddressDto, Address>(orderDto.ShipToAddress);
 
-            var order = await orderService.CreateOrderAsync(email, orderDto.DelveryMethodId, orderDto.BasketId, address);
+            var order = await orderService.CreateOrderAsync(email, orderDto.DeliveryMethodId, orderDto.BasketId, address);
         
             if(order == null) return BadRequest(new ApiResponse(400, "Proplem while creating order"));
 

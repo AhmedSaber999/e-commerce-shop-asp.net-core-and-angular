@@ -6,7 +6,9 @@ namespace API.DataShape
     public class AddressDto
     {
         [Required]
-        public string  Country { get; set; }
+        public string  FirstName { get; set; }
+        [Required]
+        public string  LastName { get; set; }
         [Required]
         public string City { get; set; }
         [Required]
@@ -14,6 +16,6 @@ namespace API.DataShape
         [Required]
         public string  State { get; set; }
         [Required]
-        public string  ZipCode { get; set; }
+        public string  Zipcode { get; set; }
     }
 }
