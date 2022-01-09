@@ -40,24 +40,24 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IReadOnlyList<OrderDto>> GetOrdersForUser()
+        public ActionResult<IReadOnlyList<ReturnedOrderDto>> GetOrdersForUser()
         {
             var email = HttpContext.User.RetrieveEmailFromPrincipal();
             var orders = orderService.GetOrdersForUser(email);
 
-            return Ok(mapper.Map<IReadOnlyList<Order>, IReadOnlyList<OrderDto>>(orders));
+            return Ok(mapper.Map<IReadOnlyList<Order>, IReadOnlyList<ReturnedOrderDto>>(orders));
         }
 
         
         [HttpGet("{id}")]
-        public ActionResult<OrderDto> GetOrderById(int id)
+        public ActionResult<ReturnedOrderDto> GetOrderById(int id)
         {
             var email = HttpContext.User.RetrieveEmailFromPrincipal();
             var order = orderService.GetOrderById(id, email);
-
+            
             if(order == null) return NotFound(new ApiResponse(404));
 
-            return Ok(mapper.Map<Order, OrderDto>(order));
+            return Ok(mapper.Map<Order, ReturnedOrderDto>(order));
         }
 
         [HttpGet("deliveryMethods")]

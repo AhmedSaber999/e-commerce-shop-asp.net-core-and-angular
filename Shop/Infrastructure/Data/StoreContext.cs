@@ -35,7 +35,7 @@ namespace Infrastructure.Data
 
                     var dateTimeProperties = entityType.ClrType.GetProperties()
                                 .Where(p => p.PropertyType == typeof(DateTimeOffset));
-                      foreach(var property in dateTimeProperties)
+                    foreach(var property in dateTimeProperties)
                     {
                         modelBuilder.Entity(entityType.Name)
                         .Property(property.Name).HasConversion(new DateTimeOffsetToBinaryConverter());

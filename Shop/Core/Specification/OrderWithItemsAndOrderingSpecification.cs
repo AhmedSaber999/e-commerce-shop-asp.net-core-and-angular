@@ -10,13 +10,15 @@ namespace Core.Specification
         {
             AddInclude(o => o.OrderItems);
             AddInclude(o => o.DeliveryMethod);
-            AddInclude(o => o.Orderdate);
+            AddInclude(o => o.ShipToAddress);
         }
 
         public OrderWithItemsAndOrderingSpecification(int id, string email)
         : base(o => o.BuyerEmail == email && o.Id == id)
         {
-            
+            AddInclude(o => o.OrderItems);
+            AddInclude(o => o.DeliveryMethod);
+            AddInclude(o => o.ShipToAddress);   
         }
 
     }
