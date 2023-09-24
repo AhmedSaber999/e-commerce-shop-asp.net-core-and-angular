@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\My Projects\\Ecommerce-shop\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj": {}
+    "C:\\Users\\Ahmed Saber\\Documents\\My Projects\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj": {}
   },
   "projects": {
-    "E:\\My Projects\\Ecommerce-shop\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj": {
+    "C:\\Users\\Ahmed Saber\\Documents\\My Projects\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\My Projects\\Ecommerce-shop\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmed Saber\\Documents\\My Projects\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "E:\\My Projects\\Ecommerce-shop\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\20110\\.nuget\\packages\\",
-        "outputPath": "E:\\My Projects\\Ecommerce-shop\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Ahmed Saber\\Documents\\My Projects\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Saber\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Saber\\Documents\\My Projects\\e-commerce-shop-asp.net-core-and-angular\\Shop\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\20110\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Ahmed Saber\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
